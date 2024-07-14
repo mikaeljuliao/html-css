@@ -1,0 +1,91 @@
+<!--
+     A tag <audio>:
+ suporta vários atributos que permitem personalizar o comportamento do áudio embutido.
+
+ PRINCIPAIS ATRIBUTOS SÃO:
+
+ 1:src
+
+Descrição: Especificaa pasta ou a URL do arquivo de áudio.
+
+2:controls
+
+Descrição: Exibe controles padrão de áudio (play, pause, volume).
+
+3:autoplay
+
+Descrição: Faz com que o áudio comece a tocar assim que estiver pronto.
+
+4:loop
+
+Descrição: Faz com que o áudio se repita após terminar.
+
+5:muted
+
+Descrição: Inicialmente silencia o áudio
+
+6:preload
+
+Descrição: Sugere ao navegador como tratar o carregamento do áudio.
+Valores:
+auto: Carrega o áudio completamente quando a página é carregada.
+metadata: Carrega apenas os metadados (duração, dimensões, etc.).
+none: Não carrega o áudio ao carregar a página.
+
+7:crossorigin
+
+Descrição: Define se o áudio deve ser carregado com CORS (Cross-Origin Resource Sharing).
+Valores:
+anonymous: Envia e aceita cookies de mesma origem.
+use-credentials: Envia credenciais (como cookies e certificados HTTP).
+
+ATRIBUTOS GLOBAIS:
+Além dos atributos específicos acima, a tag <audio> também suporta atributos globais comuns
+a todas as tags HTML, como class, id, style, title, lang, entre outros.
+
+existem duas formas de usar a tag <áudio>
+
+1: usando apenas uma compatibilidade de audio
+
+exemplo usando uma boa parte dos atributos acima:
+<h1>Reprodução de Áudio</h1>
+    <audio src="audio.mp3" controls autoplay loop muted preload="auto"></audio>
+
+ 
+2: usando diferentes compatibilidade de áudios:
+
+nesssa segunda opção, eu uso várias fontes (<source>) para garantir 
+compatibilidade com diferentes navegadores e formatos.
+
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    <p>Seu navegador não suporta o elemento de áudio.</p>
+</audio>
+ 
+formatos de audio: 
+
+1:MP3 (MPEG Audio Layer III)
+
+Extensão: .mp3
+Tipo MIME: audio/mpeg
+Descrição: Um dos formatos de áudio mais populares. Oferece boa qualidade de som com tamanhos de arquivo relativamente pequenos.
+Compatibilidade: Ampla compatibilidade com navegadores e dispositivos.
+
+
+2:OGG (Ogg Vorbis)
+
+Extensão: .ogg
+Tipo MIME: audio/ogg
+Descrição: Formato de áudio livre e aberto que oferece boa qualidade de som e compressão.
+Compatibilidade: Suportado pela maioria dos navegadores modernos.
+
+3:WAV (Waveform Audio File Format)
+
+Extensão: .wav
+Tipo MIME: audio/wav
+Descrição: Formato de áudio não comprimido que oferece alta qualidade de som, mas resulta em tamanhos de arquivo grandes.
+Compatibilidade: Amplamente suportado, mas menos usado para streaming devido ao tamanho dos arquivos.
+
+
+-->

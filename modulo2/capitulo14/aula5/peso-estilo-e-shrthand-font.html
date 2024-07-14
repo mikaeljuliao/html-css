@@ -1,0 +1,123 @@
+
+<!--
+    1. Peso da Fonte (font-weight)
+A propriedade font-weight especifica a espessura do texto. Pode ser valores numéricos a palavras-chave
+
+- Valores Numéricos: Variam de 100 a 900, onde 400 é o peso normal e 700 é o negrito.
+ex:
+p {
+    font-weight: 400; /* Normal */
+
+Palavras-Chave: normal, bold, bolder, lighter
+
+ex:
+
+p.bold {
+    font-weight: bold; /* Negrito */
+}
+
+  2. Estilo da Fonte (font-style)
+A propriedade font-style especifica o estilo da fonte, como normal, itálico ou oblíquo.
+
+ex:
+p.italic {
+    font-style: italic; /* Itálico */
+}
+
+Propriedade text-decoration:
+coloca um sublinhado no texto usando o valor underline para a
+propriedade text-decoration:
+
+ex:p {
+    text-decoration: underline;
+}
+
+  3. Propriedade Shorthand para Fonte (font)
+A propriedade shorthand font permite definir várias propriedades de fonte em uma única declaração. 
+Isso inclui font-style, font-variant, font-weight, font-size, line-height e font-family.
+
+ordem das font? 
+font-style -> font-weight -> font-size -> font-family
+
+ex:
+
+h1 {
+    font: italic bolder 3rem 'work sans', sans-serif;
+}
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Propriedades de Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        /* 
+            1. Peso da Fonte (font-weight)
+            A propriedade font-weight especifica a espessura do texto.
+            Pode ser valores numéricos a palavras-chave
+        */
+        
+        /* Valores Numéricos: Variam de 100 a 900, onde 400 é o peso normal e 700 é o negrito. */
+        p.weight-normal {
+            font-weight: 400; /* Normal */
+        }
+        
+        p.weight-bold {
+            font-weight: 700; /* Negrito */
+        }
+        
+        /* Palavras-Chave: normal, bold, bolder, lighter */
+        p.bold {
+            font-weight: bold; /* Negrito */
+        }
+        
+        /* 2. Estilo da Fonte (font-style)
+            A propriedade font-style especifica o estilo da fonte, como normal, itálico ou oblíquo.
+        */
+        p.style-normal {
+            font-style: normal; /* Normal */
+        }
+        
+        p.style-italic {
+            font-style: italic; /* Itálico */
+        }
+        
+        /* Propriedade text-decoration:
+            Coloca um sublinhado no texto usando o valor underline para a propriedade text-decoration
+        */
+        p.text-underline {
+            text-decoration: underline; /* Sublinhado */
+        }
+        
+        /* 3. Propriedade Shorthand para Fonte (font)
+            A propriedade shorthand font permite definir várias propriedades de fonte em uma única declaração.
+            Isso inclui font-style, font-variant, font-weight, font-size, line-height e font-family.
+        */
+        h1.shorthand-example {
+            font: italic small-caps bold 3rem/1.5 "Work Sans", sans-serif; 
+            /* Estilo itálico, variante small-caps, peso negrito, tamanho 3rem, altura da linha 1.5, família Work Sans */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Exemplo de peso normal da fonte -->
+    <p class="weight-normal">Este texto tem peso normal (400).</p>
+    
+    <!-- Exemplo de peso negrito da fonte -->
+    <p class="weight-bold">Este texto tem peso negrito (700).</p>
+    
+    <!-- Exemplo de peso negrito usando palavra-chave -->
+    <p class="bold">Este texto está em negrito (bold).</p>
+    
+    <!-- Exemplo de estilo normal da fonte -->
+    <p class="style-normal">Este texto tem estilo normal.</p>
+    
+    <!-- Exemplo de est

@@ -1,0 +1,50 @@
+
+<!--Links externos são links que direcionam para páginas web ou recursos fora do site atual. 
+Eles são criados usando a tag <a> com o atributo href, que especifica a URL do site externo.
+
+    <a href="https://www.example.com">Visite o Example</a>
+
+- A tag <a> é usada para criar o link.
+- O atributo href contém a URL completa do site externo.
+- O texto "Visite o Example" é o texto clicável que os usuários veem. 
+
+ABRIR LINKS EXTERNOS EM UMA NOVA ABA:
+Para abrir um link externo em uma nova aba ou janela, 
+você pode usar o atributo target com o valor _blank:
+
+Segurança com rel
+Ao usar target="_blank, adicione rel="noopener noreferrer" para melhorar a segurança e desempenho:
+
+VALORES COMUNS DO ATRIBUTO REL:
+noopener: Bloqueia o acesso da nova página à propriedade window.opener, aumentando a segurança.
+noreferrer: Além de noopener, não envia informações de referência (referrer) para a nova página.
+external: Indica que o link leva a um recurso externo, sem adicionar segurança.
+nofollow: Diz aos motores de busca para não seguir o link, útil para SEO.
+noopener noreferrer: Combinação usada para segurança e privacidade ao abrir links em novas abas.
+
+EX FINAL:
+<p>Para mais informações, <a href="https://www.wikipedia.org"
+ target="_blank" rel="noopener noreferrer">visite a Wikipedia</a>.</p
+
+
+( ISSO AQUI NÃO PRECISA ANOTAR, E SO PRA ENTENDER O PASSO A PASSO)
+Explicação do Código
+Tag <a>: Utilizada para criar o link.
+Atributo href: Especifica a URL do recurso externo, neste caso, https://www.wikipedia.org.
+Atributo target="_blank": Faz com que o link seja aberto em uma nova aba ou janela.
+Atributo rel="noopener noreferrer": Melhora a segurança e privacidade:
+noopener: Previne que a nova página tenha acesso à window.opener da página original.
+noreferrer: Impede o envio de informações de referência (referrer) para a nova página.
+-->    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

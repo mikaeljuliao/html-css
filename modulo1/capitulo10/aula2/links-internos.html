@@ -1,0 +1,40 @@
+
+<!--
+    Usando links internos:  <a href="link" rel="next" target="_self">    </a>
+
+	- O link deve estar dentro da mesma pasta;
+	- Se o link estiver dentro de outra pasta deve ser informado o caminho completo.
+                  Ex: <a href="noticias/pag003.html">    </a>;
+	- Ctrl + Espaço pode ajudar a selecionar o link;
+	-   ./    no link significa que o arquivo está na própria pasta;
+	-   ../   no link significa que o arquivo está na pasta anterior;
+        - Para voltar mais pastas em um link usa-se um ../ para cada pasta; 
+                  Ex: "../../../arquivo.html"
+	- rel="next"  para link da página seguinte;
+	- rel="prev"  para link da página anterior;
+	- rel="nofollow"  informa ao navegador que você não dá aval à página;
+	- target="_self"  indica que o link será aberto na mesma guia (opcional);
+
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>usando links internos</h2>
+    <p>essa é a primeira pagina do site, se você quiser, 
+        pode acessar tabém a minha <a href="pag2.html" rel="next">segunda pagina</a>
+    </p>
+
+    <p><a href="noticias/pag03.html">ir para a página de noticias</a></p>
+   
+</body>
+</html>

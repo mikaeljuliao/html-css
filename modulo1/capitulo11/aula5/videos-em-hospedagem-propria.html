@@ -1,0 +1,97 @@
+<!--
+ 
+
+    ATRIBUTOS MAIS UTILIZADOS: 
+
+    1:src: Especifica a URL do arquivo de vídeo.
+
+    2:controls: Adiciona controles padrão de reprodução (play, pause, volume
+   
+    3:autoplay: Faz com que o vídeo comece a tocar automaticamente assim que for carregado. 
+    (se for no chrome, preico usat o muted antes do autopay)
+
+    4:loop: Faz com que o vídeo se repita automaticamente após terminar.
+
+    5:mutet: Inicialmente silencia o vídeo.
+
+   6:preload: Sugere ao navegador como tratar o carregamento do vídeo.
+   Valores:
+   auto: Carrega o vídeo completamente quando a página é carregada.
+   metadata: Carrega apenas os metadados (duração, dimensões, etc.).
+   none: Não carrega o vídeo ao carregar a página.
+
+   7:width e height: Define a largura e altura do vídeo.
+
+   8:poster: Especifica uma imagem a ser exibida enquanto o vídeo não é reproduzido
+
+   9:crossorigin: Define como o vídeo deve ser carregado em relação ao CORS (Cross-Origin Resource Sharing).
+   Valores:
+   anonymous: Requer que os dados sejam carregados sem credenciais.
+   use-credentials: Requer que os dados sejam carregados com credenciais 
+   (como cookies e certificados HTTP).
+
+
+
+    assim como audio, existem duas formas de usar a tag <video>
+    
+    1: usando apenas uma compatibilidade de video
+    
+    só preciso por a tag, pasta e o atributo constrols
+
+    ex: <video src="midia/37 - Vídeo.mp4" controls></video>
+
+
+    2: forma mais completa, varios formatos (reconmendado)
+ 
+  -passos: criar a tag <video>, remover src="" e acresentar uma tag <source:src>
+    para cada arquivo de vídeo, entre as tags <video></video>
+
+ o sorce usado em vídeo e o source:src
+ o valor de typer é video/o formato
+ 
+EX:  <video width="500px" height="400px" poster="imagens/capa-fone.jpg" controls>
+     <source src="midia/37 - Vídeo.mp4" type="video/mp4">
+     <source src="midia/39 - Vídeo.mp4" type="video/mp4">
+     <source src="midia/41 - Vídeo.mp4" type="video/mp4">'''''''''''''''''''
+     
+     
+     
+     '
+     <p>seu navegador não tem compatibilidade com Reprodução de 
+      video.</p>
+    </video>
+    (coloco os atributos dentro da tag vídeos)
+    
+    - obs: O site tenta carregar todos os formatos de vídeo, comecando de cima
+    para baixo, até encontrar um compativel com o navegador. se não conseguir,
+    mostrará o texto em <p>
+
+    algo tecnico muito importante:
+    quanto maior for o arquivo, maior sera o custo de banda, e quanto mais maior, 
+    mais caro fica  
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vídeo com html5</title>
+</head>
+<body>
+    <h1>inserindo vídeos hospedados localmente</h1>
+    <p> este vídeo estar hospedado no meu prpprio servidor</p>
+
+    <video src="midia/37 - Vídeo.mp4"width="500px" height="400px" controls></video>
+    
+    <video width="500px" height="400px" poster="imagens/capa-fone.jpg" controls>
+     <source src="midia/37 - Vídeo.mp4" type="video/mp4">
+     <source src="midia/39 - Vídeo.mp4" type="video/mp4">
+     <source src="midia/41 - Vídeo.mp4" type="video/mp4">
+     <p>seu navegador não tem compatibilidade com Reprodução de 
+      video.</p>
+    </video>
+    
+</body>
+</html>

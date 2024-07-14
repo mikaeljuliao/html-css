@@ -1,0 +1,150 @@
+<!--
+    Círculo Cromático
+O círculo cromático é uma representação visual das cores organizadas 
+de forma circular, mostrando as relações entre as cores primárias, secundárias 
+e terciárias.
+
+Cores Primárias: Vermelho, Azul, Amarelo.
+Cores Secundárias: Verde, Laranja, Roxo (obtidas pela mistura das cores primárias).
+Cores Terciárias: São obtidas pela mistura de uma cor primária com uma cor 
+secundária adjacente (ex.: amarelo-laranja, azul-verde).
+
+Cores complementares:
+ são aquelas que estão opostas no círculo cromático.
+
+Exemplos Comuns:
+
+Vermelho e verde
+Azul e laranja
+Amarelo e roxo
+
+CORES ANÁLOGAS:
+elas não tem um contraste grande,mas são visiveis
+
+como saber as cores analogas?
+Cores análogas são encontradas lado a lado no círculo cromático.
+Escolha uma cor principal e as cores à esquerda e à direita serão suas cores análogas.
+
+CORES ANÁLOGAS RELACIONADAS:
+
+1- Escolha uma cor principal no círculo cromático.
+2- Selecione uma cor análoga próxima à cor principal.
+3-Pule a próxima cor vizinha após a cor análoga selecionada e escolha essa como a
+segunda cor para adicionar um contraste sutil.
+
+-resultado, crio uma paleta com duas cores similirares e uma com certa contraste
+
+CORES TRIÁDICAS:
+passo a passo: 
+1- escolho uma cor principal
+2- pulo 3 casas e escolho a cor seguinte, e repito isso mais uma vez
+3- com as cores escolhidas, eu formo um triangulo no circulo cromatico
+
+cores triádicas mais comuns:
+- amarelo,vermelho e azul
+
+cores em quadrado:
+diferente das triadicas, eu pulo apens duas casas, mas dessa vez eu tenho 4 cores
+
+passo a passo:
+1- escolho a cor principal
+2- pulo 2 casas e escolho a seguinte, repito isso mais duas vezes
+- com as cores escolhidas, eu tenho quatro, formando um quadrado no circulo cromatico
+
+
+monocromia:
+é um esquema de cores que utiliza apenas uma cor em diferentes tons,
+matizes e saturação.
+
+matriz- A matriz contém os valores dos pixels da imagem,
+onde cada pixel é representado por um conjunto de valores que indicam sua cor.
+
+Como criar uma paleta monocromática:
+1- Escolha uma cor principal
+
+2- Crie variações da cor base alterando a iluminação (tons mais claros e mais escuros),
+a saturação (cores mais vibrantes ou mais neutras) 
+e a matiz (variações sutis na cor).
+
+-3 Use diferentes tons da cor base de forma equilibrada e repetir o processo duas
+no maximounas 4 vezes.
+
+
+dica: usar de 3 a 5 cores em site no maximo, a media e usar 4
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Cores Análogas</title>
+    <style>
+        /* Cor principal: Azul */
+        body {
+            background-color: #3498db; /* Azul */
+            color: #2ecc71; /* Verde */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cores análogas para diferentes elementos */
+        .header {
+            background-color: #1abc9c; /* Azul-verde */
+            color: #ffffff; /* Branco */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #2ecc71; /* Verde */
+            color: #ffffff; /* Branco */
+            border: 2px solid #1abc9c; /* Azul-verde */
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1abc9c; /* Azul-verde */
+            color: #3498db; /* Azul */
+        }
+
+        .footer {
+            background-color: #2ecc71; /* Verde */
+            color: #3498db; /* Azul */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: #1abc9c; /* Azul-verde */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bem-vindo ao Exemplo de Cores Análogas</h1>
+    </div>
+
+    <div class="content">
+        <p>Este é um exemplo de como usar cores análogas em um design de página web.</p>
+        <a href="#" class="button">Clique Aqui</a>
+    </div>
+
+    <div class="footer">
+        <p>Rodapé do Exemplo</p>
+    </div>
+</body>
+</html>

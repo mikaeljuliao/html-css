@@ -1,0 +1,72 @@
+<!--  
+     a diferença entre id e class:
+    -id: deve ser unico, o certo de acordo com os padroes html, voce so
+     pode identificar apenas um elemnto por id
+    -class: já a class, pode ser aplicadas a mesma class a mutiplos elementos
+
+    Sintaxe de Seleção:
+
+ID: em html e id= "nome do id"
+e em css é, # seguido pelo nome do ID. 
+Classe:  class: em html e class = nome da classe.
+e em css é . seguido do nome da classe
+
+hierarquia de especificidade em CSS:
+ID: Mais específico, prevalece sobre classes em conflitos de estilos. 
+Útil para estilizar elementos específicos.
+Classe: Menos específica que IDs. Em conflitos, o estilo do ID tem prioridade.
+Serve para estilizar vários elementos de forma semelhante.
+
+ como usar duas class ao mesmo tempo:
+ - aplico uma class em html e coloco dois nomes pra ela, assim ela ganha duas formas de identifição.
+ não precisa de virgula e sim separar por espaço
+ex: <p class= ' cor destaque'> exemplo </p>
+
+id e destaque ao mesmo tempo:
+ID e destaque ao mesmo tempo: apenas preciso colocá-los juntos dentro da tag HTML.
+
+ex: <p id="meuId" class="destaque">Exemplo</p>
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 id="principal">criando site com html e css</h1>
+    <h1>aprendendo html</h1>
+    <h2 class="basico">html básico</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt neque corporis, 
+    dolor error at molestias atque libero non cupiditate nostrum consequatur, 
+    sint fugiat repudiandae quis cum, pariatur eaque. Tempora.</p>
+    <h2 class="intermediario">html intermediario</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt neque corporis, 
+    dolor error at molestias atque libero non cupiditate nostrum consequatur, 
+    sint fugiat repudiandae quis cum, pariatur eaque. Tempora.</p>
+    <h2 class="avancado">html avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt neque corporis, 
+    dolor error at molestias atque libero non cupiditate nostrum consequatur, 
+    sint fugiat repudiandae quis cum, pariatur eaque. Tempora.</p>
+    <h1>aprendendo css</h1>
+    <h2 class="basico">css básico</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt neque corporis, 
+    dolor error at molestias atque libero non cupiditate nostrum consequatur, 
+    sint fugiat repudiandae quis cum, pariatur eaque. Tempora.</p>
+    <h2 class="intermediario">css intermediario</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt neque corporis, 
+    dolor error at molestias atque libero non cupiditate nostrum consequatur, 
+    sint fugiat repudiandae quis cum, pariatur eaque. Tempora.</p>
+    <h2 class="avancado">css avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt neque corporis, 
+    dolor error at molestias atque libero non cupiditate nostrum consequatur, 
+    sint fugiat repudiandae quis cum, pariatur eaque. Tempora.</p>
+</body>
+</html>

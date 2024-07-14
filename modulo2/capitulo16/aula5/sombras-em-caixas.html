@@ -1,0 +1,115 @@
+<!-- 
+   dica, as sombras não precisam ser exageradas, o cerebro percebe os mini detalhe.
+   
+   - as sombras ja funcionam com shortrand. shortrand e varias delcaração de uma vez
+
+   tag de sombra: box-shadow
+   ex:boxshadow: 1px 1px 1px black
+
+   paramatros:
+   -1 valor:deslocamento horizontal (direita e esquerda)
+   -2 valor: deslocamento vertical (cima e baixo)
+   -3 valor: espalhamento
+   -4 valor: sombra
+
+   criando minhas prpras sombras:
+   em add box-shadow na ferramento inspecionar
+   vai abrir uma tela com duas formas de sombra.
+   -forma 1, Qutset: forma padrao, a sombra do lado de fora
+   ex: boxshadow: 1px 1px 1px black
+   -forma 2, inset: sombra interna, do lado de dentro
+   ex: ex: boxshadow: imset 1px 1px 1px  1px black
+
+
+
+ -->
+   
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>grouping tags</title>
+     <style>
+         body{
+             font-family: Arial, Helvetica, sans-serif;
+             background-color: dimgray;
+             margin: 0px;
+         }
+         header{
+             background-color: white;
+             padding: 10px;
+             margin: 10px;
+         }
+         nav{
+             background-color:rgb(70, 69, 69);
+             padding: 3px;
+             box-shadow: inset 3px 5px 7px red;
+         }
+         nav > a {
+             text-decoration: none;
+             color: white;
+             font-weight: bold;
+             margin-left: 45px;
+         }
+         nav > a:hover{
+             text-decoration: underline;
+         }
+         main {
+             background-color: white;
+             padding: 10px;
+             margin: 10px;
+
+         }
+         article {
+             background-color: lightgray;
+             padding: 5px;
+         }
+         article > aside{
+             background-color: rgb(145, 142, 142);
+         }
+         footer{
+             background-color: black;
+             color: white;
+             text-align: center;
+             padding: 1px;
+             margin: 10px;
+         }
+     </style>
+ </head>
+ <body>
+     <header>
+         <h1>meu site</h1>
+         <nav>
+             <a href="#">link</a>
+             <a href="#">link</a>
+             <a href="#">link</a> 
+             <a href="#">link</a>
+         </nav>
+
+     </header>
+     <main>
+         <section id="assuntos">
+
+         </section>
+         <section id="noticias">
+             <article>
+                <aside>
+                     <h2> nóticias sobre o brasil</h2>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde optio excepturi
+                      quae quo maxime illum.</p>
+                     <p>Artigo escrito por josé da silva</p>
+                </aside>
+             </article>
+             <article>
+
+             </article>
+         </section>
+
+     </main>
+     <footer>
+         <p>artigo escrito por mikael</p>
+
+     </footer>
+ </body>
+ </html>

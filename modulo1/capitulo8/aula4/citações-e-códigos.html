@@ -1,0 +1,91 @@
+ 
+<!--
+    citaçoes e codigos:
+
+    TAG <CODE></CODE: 
+    alinham caracteres falicitando a leitura e analise de codigo,
+    usando fonte monoespaçada, onde cada caractere ocupa a mesma quantidade de espaço horizontal.
+    ex: a letra i e w ocupam o mesmo espaço 
+
+    TAG <PRE>:
+    é usada para definir texto pre-formatado. o texto da tag <pre> é exeibiado pelo o navegador 
+    exatamente como foi escrita pelo o codigo fonte
+      
+    EX:
+       <pre>
+        Este é um exemplo de texto preformatado.
+            A indentação e as quebras de linha são preservadas.
+                Isto pode ser útil para exibir código:
+                function exemplo() {
+                    console.log('Olá, mundo!');
+                }
+    </pre>
+    
+    (no texto acima, será exeibido exatamente como estar, com todos
+    os espaços e quebra preservados)
+
+    oque é preformatado?
+    exibe o texto exatamente como foi escrito no codigo original, espaços quebra de linhas 
+    e cacacteres em branco são preservados e mostrados da mesma maneira que foram digitados.
+
+
+    citaçao: tendo duas formas de citaçoes, a simples e a completa
+
+    TAG: <q></q> é usada para citações curtas e inline
+    TAG: <blockquote></blockquote> é utilizada para citações longas e em bloco.
+
+    oque uma citação?
+    Uma citação é uma referência direta a uma fala ou texto de outra pessoa,
+    reproduzida de forma literal. 
+
+    abreviação: Quando o usuário passa o mouse sobre a abreviação, o texto completo 
+    especificado no atributo title é exibido como uma dica.
+
+    TAG> a tag usada é a <abbr></abbr>
+    EX: <abbr title="testo especificado"></abbr>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>outras formatações</h1>
+    <h2>código-fonte / pré-formataçã</h2>
+    <!--tag code-->
+    <p>o comando <code>document.getElementById ("teste")</code>
+     é escrito em linguagem javascript 
+    </p>
+    <!--tag pre-->
+    <pre>
+        Este é um exemplo de texto preformatado.
+            A indentação e as quebras de linha são preservadas.
+                Isto pode ser útil para exibir código:
+                function exemplo() {
+                    console.log('Olá, mundo!');
+                }
+    </pre>
+    <!--citações curtas e inline-->
+    <h2>citações curtas e inline</h2>
+    <p>como diria o pai de um amigo: <q>o computador é um burro muito rapido</q>
+    </p>
+    <!--citações longas e em bloco-->
+    <h2>citações longas e em bloco</h2>
+    <p>segundo jef noble, no seu livro HTML para leigos:</p>
+    <blockquote>
+        a diferença entre elemnto inline e um bloco de texto
+        é importante. os elementos HTML neste capítulo
+        descreve os blocos de texto
+    </blockquote>
+    <!--abreviações-->
+    <h2>abreviações</h2>
+    <p>estou estudando <abbr title="hyperText makup languge">HTML</abbr>
+    e <abbr title="cascading style sheets">Css</abbr>. estou adorando!</p>
+    <abbr title="testo especificado"></abbr>
+</body>
+</html>

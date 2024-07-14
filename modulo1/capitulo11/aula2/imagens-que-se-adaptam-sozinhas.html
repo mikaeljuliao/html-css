@@ -1,0 +1,62 @@
+
+
+<!--
+
+    TAG <PIcture></PIcture> EM HTML
+    permite fornecer diferentes versões de uma imagem para diferentes dispositivos e condições
+
+    Estrutura e Uso da Tag<picture>:
+    A tag <picture>é usada em conjunto com uma ou mais tags <source>e uma tag <img>
+        
+    componentes da  tag <picture>:
+    
+    Marcação<source> :
+
+Atributo "srcset" : Especifica a URL ou a paasta da imagem a ser exibida.
+Atributo "media" : Define a condição para que essa imagem seja usada,
+baseada em media queries (como largura mínima ou maxima da tela).
+
+Marcação<img> :
+
+Atributo "src" : Forneça uma URL da imagem de fallback, caso nenhuma das condições das tags <source>seja atendida.
+Atributo "alt" : Fornecer um texto alternativo para a imagem, importante para acessibilidade.
+
+
+EX usado na aua <picture>
+        <source media="(max-width: 600px)" srcset="imagens/foto.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/fotoM-600x600.png" type="image/png">
+        <img src="imagens/fotoG-1000x1000.webp" alt="imagem flexivel">
+    </picture
+
+    caso não esteja conseguindo:
+1 - verifique se a imagem está salva como PNG
+2 - Veja se não deixou o nome da foto com algum espaço
+3 - Veja se colocou o "max" em width e o px no final
+4 - verificar se colocou png depois de imagem/
+5 - verificar se a ordem das imagens esão corretas
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>imagem dinamica</h1>
+    <p>tente abrir esse site em varios dispotivos diferentes ou simplismente
+        auemnte e diminua o tamanho do seu navegador
+    </p>
+    <picture>
+        <source media="(max-width: 600px)" srcset="imagens/foto.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/fotoM-600x600.png" type="image/png">
+        <img src="imagens/fotoG-1000x1000.webp" alt="imagem flexivel">
+    </picture>
+  
+    <PIcture>
+     <source media="(min-width: )" srcset="" type="image/">
+    </PIcture>
+</body>
+</html>

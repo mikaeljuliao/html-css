@@ -1,0 +1,122 @@
+<!--
+    GRADIEND:
+     Existem dois tipos principais de gradientes no CSS: linear e radial.
+
+     gradiend linear:
+     cria uma transição suave entre cores ao longo de uma linha reta. 
+
+     sintaxe:
+     - tag: background-image:
+     Descrição: Define a imagem de fundo de um elemento. Quando usada com linear-gradient, 
+     permite a criação de um gradiente como fundo.
+
+    Função linear-gradient:
+
+- Descrição: Uma função CSS que cria uma imagem de gradiente linear.
+- Direção: (opcional): Define a direção da transição das cores (por exemplo, to right, to bottom, 45deg).
+- Pontos de Cor (color stops): define qual cor começaa e qual termina, 
+as primeiras cores e as que vai comecando  (por exemplo, red, yellow 50%).
+
+
+EX:body {
+    background-image: linear-gradient(to right, red, yellow);
+}
+ (Explicação: Aplica um gradiente que transita de red para yellow da esquerda
+  para a direita no fundo do body.)
+
+
+  RADIAL GRADIENT: 
+cria uma transição de cores que se irradia de um ponto central.
+
+sintaxe basica:
+
+ex: background: radial-gradient(shape size at position, color-stop1, color-stop2, ...);
+
+-1 shape: define a forma do gradiente (pode ser circle ou ellipse).
+2- size: define o tamanho do gradiente (pode ser palavras-chave como closest-side, farthest-corner, etc.).
+3- position: define a posição do centro do gradiente (pode ser palavras-chave como center, top left, etc., 
+ou coordenadas como 50% 50%).
+4- color-stop: define as cores do gradiente e a parada e o termino delas, tem a mesma regra do linear.
+
+exempço basico:
+background: radial-gradient(circle, red, yellow, green);
+(cria um gradiente circular que vai do vermelho no centro, passando por amarelo e terminando em verde.)
+
+exemplo complexo:
+background: radial-gradient(ellipse at center, red, yellow 20%, green 60%, blue 80%);
+(o gradiente é elíptico e vai do vermelho no centro, passa por amarelo a 20%, verde a 60% e azul a 80%.)
+
+  DIREÇÕES: existem duas formas, com palavras chaves e com angulos
+ 
+Direções com Palavras-chave:
+
+- De cima para baixo: to bottom
+background-image: linear-gradient(to bottom, #ff7e5f, #feb47b);
+
+- De baixo para cima: to top
+background-image: linear-gradient(to top, #ff7e5f, #feb47b);
+
+- Da esquerda para a direita: to right
+background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+
+- Da direita para a esquerda:to left
+background-image: linear-gradient(to left, #ff7e5f, #feb47b);
+
+- Diagonal do canto superior esquerdo ao canto inferior direito:to bottom right
+background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+
+- Diagonal do canto inferior esquerdo ao canto superior direito: to top right
+background-image: linear-gradient(to top right, #ff7e5f, #feb47b);
+
+Direções com Ângulos:
+0deg= to top, 90deg= to right, 180deg= to bottom, e 270deg= to left.
+
+- Ângulo de 0 graus (de baixo para cima): 0deg
+background-image: linear-gradient(0deg, #ff7e5f, #feb47b);
+
+Ângulo de 90 graus (da esquerda para a direita): 90deg
+background-image: linear-gradient(90deg, #ff7e5f, #feb47b);
+
+Ângulo de 180 graus (de cima para baixo): 180deg
+background-image: linear-gradient(180deg, #ff7e5f, #feb47b);
+
+Ângulo de 270 graus (da direita para a esquerda): 270deg
+background-image: linear-gradient(270deg, #ff7e5f, #feb47b);
+
+Ângulo de 45 graus (diagonal do canto inferior esquerdo ao canto superior direito): 45deg
+background-image: linear-gradient(45deg, #ff7e5f, #feb47b);
+ 
+CONFIGURAÇÃO GLOBAIS:
+ex:
+*{
+            height: 100%;
+        }
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Gradientes</title>
+    <style>
+        .linear-gradient {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to right, red, yellow, green);
+            margin-bottom: 20px;
+        }
+
+        .radial-gradient {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, red, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <div class="linear-gradient"></div>
+    <div class="radial-gradient"></div>
+</body>
+</html>
