@@ -1,0 +1,82 @@
+<!--
+ 
+  Imagens de fundo podem ser usadas no background de div's e do body 
+  (que também é uma caixa). 
+  Basicamente, qualquer elemento visual que funcione como uma caixa pode ter uma imagem de fundo. 
+
+  Como fazer?
+  Use a Propriedade de Estilo "background-image" com a função "url". 
+  Basta colocar o endereço da imagem entre os parênteses e aspas simplis.
+
+  Exemplo:
+  div {
+    background-image: url('imagens/pattern003.png');
+  }
+
+  "Observação: No valor da função "url" da propriedade "background-image", 
+  você também pode usar o link de uma imagem. 
+  Mas cuidado: se a imagem do link sair do ar, seu site pode perder esse visual."
+
+  
+  Imagens de fundo, Comportamento padrão e considerações de desempenho:
+
+  Ao usar imagens de fundo em elementos como divs e body, elas são carregadas 
+  automaticamente no tamanho total do elemento. Se a imagem for menor que o elemento,
+   ela será repetida para cobrir toda a área. Se for maior, apenas uma parte visível 
+   será mostrada, cortada para ajustar ao fundo do elemento.
+
+  Imagens de fundo como elementos visuais:
+
+  É importante lembrar que imagens de fundo não são parte do conteúdo semântico do seu site, 
+  servindo apenas para fins visuais e de design.
+
+  Considerações sobre o tamanho das imagens de fundo:
+
+  Cuidado com o tamanho das imagens de fundo em termos de peso (KB, MB) e resolução.
+   Imagens muito grandes podem tornar seu site lento. Ajuste a resolução e o tamanho
+    do arquivo para otimizar o carregamento e garantir um bom desempenho, 
+    o que também é importante para SEO.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(imagens/wallpaper001.jpg);
+        }
+        div.quadrado{
+            display: inline-block;
+            border-radius: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+        div#q1{
+          background-color: skyblue;
+        }
+        div#q2{
+            background-image: linear-gradient(to bottom, yellow, red);
+        }
+        div#q3{
+            background-image: url('imagens/pattern001.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="q1">
+
+    </div>
+    <div class="quadrado" id="q2">
+
+    </div>
+    <div class="quadrado" id="q3">
+
+    </div>
+</body>
+</html>
