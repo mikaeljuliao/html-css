@@ -1,0 +1,65 @@
+<!--
+  Propriedade de Estilo "background-size":
+
+  Tipos de valores:
+  - "largura x altura": Fixa a dimensão da imagem, 
+  não responsiva e pode causar quebras ou bordas visíveis no background, mesmo ao usar %.
+  
+  Valores nominais:
+  - auto: valor padrãp, Tamanho original da imagem, geralmente resulta em quebras de repetição ou bordas 
+  não responsivas.
+  - contain: Ajusta a imagem para caber totalmente na tela sem cortes, mas pode resultar em 
+  quebras de repetição ou bordas visíveis.
+  - cover: Redimensiona a imagem para cobrir todo o contêiner sem distorção, cortando se necessário.
+   Recomendado para resultados responsivos.
+
+  Considerações adicionais:
+  - A escolha do valor depende do efeito desejado e do conteúdo da página.
+  - Ao usar imagens de fundo, é prudente definir uma cor de fundo inicial para 
+  evitar que o conteúdo seja exibido em branco enquanto a imagem carrega.
+  - Isso é especialmente importante para garantir uma experiência de carregamento fluida, 
+  mesmo em conexões lentas.
+
+  Observação:
+  - O carregamento de imagens de fundo pode ser mais lento do que o conteúdo HTML, 
+  portanto, é aconselhável fornecer uma cor de fundo como placeholder inicial.
+
+
+-->
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        background-color: black;
+        background-image: url(imagens/wallpaper002.jpg);
+    }
+    main{
+        background-color: white;
+        width: 400px;
+        padding: 10px;
+        margin: auto;
+    }
+  </style>
+  <body>
+<main>
+    <h1>teste de imagem de fundo</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat 
+        debitis, animi ut quae atque cum hic, est optio amet vero, quaerat 
+        unde eveniet maiores fuga nemo! Consequatur at amet totam.
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
+         debitis, animi ut quae atque cum hic, est optio amet vero, quaerat
+          unde eveniet maiores fuga nemo! Consequatur at amet totam.
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat 
+        debitis, animi ut quae atque cum hic, est optio amet vero, quaerat 
+        unde eveniet maiores fuga nemo! Consequatur at amet totam.
+    </p>
+  
+  </body>
+  </html>
