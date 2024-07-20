@@ -1,0 +1,98 @@
+<!--
+  RESUMO - Centralização vertical de caixas:
+
+  Na parte de HTML:
+
+  <body>
+    <section id="container">
+      <article id="conteúdo">
+         Conteúdo aqui 
+    </article>
+</section>
+</body>
+
+Na parte de CSS:
+
+Centralização com position: absolute:
+
+- Para o elemento pai (container):
+#container {
+position: relative; /* Opcional; por padrão já é relative em CSS */
+height: 500px;
+padding: 10px;
+background-color: purple;
+}
+
+- Para o elemento filho (conteúdo):
+#conteúdo {
+position: absolute; /* Permite usar as propriedades top e left */
+height: 200px;
+width: 400px;
+background-color: yellow;
+left: 50%; /* Define o ponto inicial no centro horizontal */
+top: 50%; /* Define o ponto inicial no centro vertical */
+transform: translate(-50%, -50%); /* Move o elemento de volta metade do seu próprio tamanho, corrigindo a centralização */
+
+/* Explicação detalhada */
+/*
+  - O valor 'left: 50%' posiciona o canto esquerdo do elemento filho (conteúdo) no meio horizontal
+   do seu elemento pai (container).
+  - Da mesma forma, 'top: 50%' posiciona o canto superior do elemento filho no meio vertical 
+  do seu elemento pai.
+
+  - A propriedade 'transform: translate(-50%, -50%)' (translate, siginifica mover)
+   ajusta a posição do elemento filho de acordo 
+  com sua própria largura e altura, movendo-o de volta 50% dessas dimensões.
+   Isso é essencial para garantir que o centro do elemento filho coincida com o centro do
+  elemento pai, proporcionando uma centralização perfeita.
+
+  Se os valores fossem positivos, como 'translate(50%, 50%)', o elemento seria movido para
+   fora do seu centro, ao invés de dentro.
+*/
+}
+
+Forma mais fácil de centralizar com flexbox:
+
+- No elemento pai (container):
+#container {
+display: flex; /* Habilita o modelo de layout flexível */
+justify-content: center; /* Alinha os itens horizontalmente no centro */
+align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+OBS: Essas propriedades são aplicadas ao elemento pai (container) para centralizar seu conteúdo.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+         position: relative;
+         height: 500px;
+         background-color: aquamarine;
+         margin: 10px;
+        }
+        #conteudo{
+           position: absolute;
+           height: 200px;
+           width: 400px;
+           background-color: yellow;
+
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
