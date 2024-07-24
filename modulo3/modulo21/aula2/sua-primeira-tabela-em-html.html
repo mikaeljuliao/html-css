@@ -1,0 +1,46 @@
+<!--
+
+
+  hierarquia de tabela simplis:
+  table = tabela
+    table row = linha de tabela
+      table header = cabeçalho de tabela
+      table data = dado de tabela
+  
+      principais tags:
+1. **`<table>`**: Define o início e o fim de uma tabela.
+2. **`<tr>` (table row)**: Define uma linha dentro da tabela.
+3. **`<td>` (table data)**: Define uma célula de dados dentro de uma linha.
+4. **`<th>` (table header)**: Define uma célula de cabeçalho dentro de uma linha, geralmente usada para títulos de colunas.
+5. **`<thead>`**: Define um grupo de cabeçalhos de uma tabela.
+6. **`<tbody>`**: Define o corpo principal de uma tabela. 
+7. **`<tfoot>`**: Define o rodapé de uma tabela.
+
+  observação:
+    de acordo com o w3c, os tr e td pode ser feito sem fechamento. 
+    mesmo sabendo dissso, e melhor fazer com fechmaento para evitar erros futuros
+-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>minha primeira tabela</h1>
+        <table>
+            <tr> <!-- primeira linha -->
+                <td>cor1</td>
+                <td>cor2</td>
+                <td>cor3</td>
+            </tr>
+            <tr>  <!-- segunda linha -->
+                <td>numero1</td>
+                <td>numero2</td>
+                <td>numero3</td>
+            </tr>
+        </table>
+
+    </body>
+    </html>
