@@ -1,0 +1,87 @@
+<!--
+
+
+Importância da Mesclagem de Células:
+
+A mesclagem de células é uma técnica crucial em muitas tabelas, essencial para organizar e 
+apresentar dados de forma clara.
+
+Processo de Mesclagem:
+
+Ao mesclar células em uma tabela já existente, você basicamente remove uma célula e expande
+ a célula vizinha para ocupar o espaço, criando uma fusão visual.
+
+Passos para Mesclar Células:
+
+Identificação da Célula Vizinha:
+
+No HTML da sua tabela, localize a célula vizinha daquela que você deseja expandir e delete-a.
+
+Criação de Lacuna:
+
+Após deletar a célula vizinha, a tabela apresentará uma lacuna (um buraco), iniciando sempre à direita da tabela.
+
+Preenchimento da Lacuna:
+
+Para preencher essa lacuna e mesclar as células:
+
+Utilize a expansão em forma de COLUNA se a célula deletada estiver ao lado (esquerda ou direita) da 
+célula que será expandida.
+Utilize a expansão em forma de LINHA se a célula deletada estiver abaixo da célula que será expandida.
+Expansão na Prática:
+
+Expansão em Forma de Coluna:
+
+Para expandir uma célula para duas colunas, utilize o atributo HTML colspan="2". 
+Altere o valor numérico para expandir para mais colunas, após excluir as células vizinhas.
+
+Expansão em Forma de Linha:
+
+Para expandir uma célula para duas linhas, utilize o atributo HTML rowspan="2". 
+
+posso Modificar o valor numérico para expandir para mais linhas, após excluir as células vizinhas.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 300px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de Células</h1>
+    <table>
+        <tr>
+            <td>a</td>
+            <td colspan="2">b</td> <!-- Expansão em Forma de colunas, 2 colunas. -->
+            
+        </tr>
+        <tr>
+            <td rowspan="1">d</td> <!-- Expansão em Forma de Linha, 3 linhas. -->
+          
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>h</td>
+            <td>i</td>
+        </tr>
+    </table>
+</body>
+</html>

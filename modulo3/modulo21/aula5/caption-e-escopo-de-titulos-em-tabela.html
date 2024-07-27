@@ -1,0 +1,121 @@
+<!--
+  
+CAPTION:
+é uma legenda da tabela, é usada antes da cabeça
+ex: <capitin> população daunidade federativas</caption>
+
+ Escopos dos elementos "th" em tabelas
+1. O que é "th" e "td"
+Os desenvolvedores iniciantes geralmente confundem os elementos "th" e "td" em tabelas.
+Eles têm dificuldade em escolher qual usar e acabam usando "td" para tudo.
+ Isso é ruim porque o significado dos elementos no HTML é importante.
+
+2. Células de Título = "th"
+A tag "th" (table header) é usada para criar células de título ou rótulo em uma tabela. 
+Ela pode ser usada tanto dentro da área do cabeçalho (thead) quanto na área do rodapé (tfoot). 
+Por exemplo: no rodapé da tabela, podemos ter a necessidade de usar uma célula de título, como
+"Total de Habitantes". Nesse caso, podemos usar "th" sem problemas.
+
+3. Células de Dado = "td"
+A tag "td" é usada para criar células de dado em uma tabela. Esses dados podem ser textuais ou numéricos.
+
+4. Uso do atributo "scope"
+A tag "th" possui um atributo chamado "scope", que é usado para especificar se o título da célula é para
+ uma coluna (scope="col") ou para uma linha (scope="row"). 
+ 
+ importancia:
+ Esse atributo é importante para que os mecanismos 
+ de busca possam analisar os dados da tabela de forma coerente e com sentido.
+
+ Exemplo: <table>
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>João</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Maria</td>
+      <td>30</td>
+    </tr>
+  </tbody>
+</table>
+
+
+-->
+
+<!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                width: 500px;
+                border-collapse: collapse;
+            }
+            caption{
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 10px;
+                background-color: lightgray;
+            }
+
+            td, th {
+                border: 1px solid black;
+                padding: 10px;
+            }
+            thead, tfoot {
+                background-color: grey;
+                color: white;
+            }
+            td.num {
+                text-align: right ;
+            }
+        </style>
+       </head>
+       <body>
+         <h1>fazendo tabelas grandes</h1>
+         <table>
+            <caption>População das unidades federativas</caption>
+            <thead> <!-- (cabeçalho )-->
+                 <th scope="col"> Estado</th> <!-- linha da coluna,titulo,cabelaho, etc-->
+                 <th scope="col" style="width: 80px;"> População </th>
+            </thead>
+            <tbody>
+                <tr> <!-- linha -->
+                    <td>são paulo</td> <!-- dados da linha -->
+                    <td class="num">45.919.049</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>rio de janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>ceára</td>
+                    <td class="num">9.132.071</td>
+                </tr>
+                <tr>
+                    <td>Rio grande do sul</td>
+                    <td class="num">11.377.239</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- (ródaape )-->
+                 <tr> 
+                    <th scope="row">total de habitantes</th>
+                    <td class="num"><strong>210.447.125</strong></td>
+                 </tr>
+            </tfoot>
+         </table>
+       </body>
+       </html>

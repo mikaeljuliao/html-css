@@ -1,0 +1,132 @@
+<!--
+   
+ Problema na leitura de tabelas densas:
+
+Em tabelas com muitos dados, coluna, e letras pequenas, é difícil localizar informações específicas.
+a Solução com efeito zebrado.
+
+oque faz o efeito zebrado?
+O efeito zebrado melhora a legibilidade ao alternar cores de fundo entre linhas, colocando uma cor
+a cada linha.
+
+Implementação básica do efeito:
+Para fazer isso, devemos abrir um seletor para o elemento "tbody", indicado o seu filho direto 
+que queremos formatar, que no caso é o " tr " (linha de tabela)... No elemento tr, iremos usar a pseudo-classe
+ " nth-child() ", Para essa pseudo-classe, devemos inserir um valor dentro dos parênteses: 
+
+ Uso da pseudo-classe nth-child():.
+
+O valor para aplicar o efeito zebrado é o " 2n ", que faz com que o background-color configurado para a linha seja
+inserido de duas em duas linhas, uma sim e uma não 
+(mude o valor numérico se desejar um intervalo maior de inserção).
+
+
+Exemplo de código CSS:
+tbody > tr:nth-child(2n) {
+    background-color: lightgray;
+}
+`
+
+Utilização dos Valores "even" e "odd" na Pseudo-classe nth-child():
+Na pseudo-classe " nth-child() ", ao invés de usarmos o valor " 2n ", também podemos usar os valores 
+nominais " even " OU " odd " (par ou ímpar). Com um desses dois nomes como valor, podemos deixar toda
+ linha que é ímpar (odd) com background, ou vice-versa, se for o valor even.
+ 
+
+
+Equivalência de "2n" e "2n-1":
+O valor " 2n " seria equivalente ao valor nominal " even " (par) 
+Entretanto, também temos o valor " 2n-1 ", que seria equivalente ao valor nominal " odd " (ímpar)
+
+
+
+Criando um Efeito Zebrado com Cores Alternadas:
+
+Para criar um efeito zebrado com cores alternadas, use dois seletores nth-child() com valores opostos.
+Um define a cor para linhas pares (ou ímpares), enquanto o outro usa uma cor diferente, 
+criando um padrão visual de alternância, como azul e amarelo, por exemplo.
+
+
+Outras personalizações possíveis:
+Além do background-color , é possível ajustar outras propriedades como tamanho de fonte, peso da letra, etc.,
+ dentro dos mesmo seletor para um efeito visual mais destacado.
+
+ Recomendação de uso:
+Ideal para tabelas com muitas colunas e linhas, especialmente quando as fontes são pequenas, para 
+melhorar a leitura e a compreensão dos dados.
+-->
+
+<!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                width: 500px;
+                border-collapse: collapse;
+            }
+            caption{
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 10px;
+                background-color: lightgray;
+            }
+          
+            tbody > tr:nth-child(even){   /* efeito ebrado */
+               background-color: lightgray;
+            }
+
+            td, th {
+                border: 1px solid black;
+                padding: 10px;
+            }
+            thead, tfoot {
+                background-color: grey;
+                color: white;
+            }
+            td.num {
+                text-align: right ;
+            }
+        </style>
+       </head>
+       <body>
+         <h1>fazendo tabelas grandes</h1>
+         <table>
+            <caption>População das unidades federativas</caption>
+            <thead> <!-- (cabeçalho )-->
+                 <th scope="col"> Estado</th> <!-- linha da coluna,titulo,cabelaho, etc-->
+                 <th scope="col" style="width: 80px;"> População </th>
+            </thead>
+            <tbody>
+                <tr> <!-- linha -->
+                    <td>são paulo</td> <!-- dados da linha -->
+                    <td class="num">45.919.049</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>rio de janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>ceára</td>
+                    <td class="num">9.132.071</td>
+                </tr>
+                <tr>
+                    <td>Rio grande do sul</td>
+                    <td class="num">11.377.239</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- (ródaape )-->
+                 <tr> 
+                    <th scope="row">total de habitantes</th>
+                    <td class="num"><strong>210.447.125</strong></td>
+                 </tr>
+            </tfoot>
+         </table>
+       </body>
+       </html>

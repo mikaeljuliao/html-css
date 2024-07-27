@@ -1,0 +1,105 @@
+<!--
+   anatopia para tabelas grandes:
+
+   table
+     THEAD (cabçada tabela)
+       dentro do cabeçalho posso ter, tr, td, th
+     TBODY (CORPO DA TABELA)
+       dentro do corpo posso ter, tr, td, th
+     TFOOT (ródape da tabela)
+       dentro do footer posso ter, tr, td, th
+
+exemplo:
+
+    <h1>Como criar tabelas grandes</h1>
+
+    <table>  (Início da tabela)
+        
+        <thead>(Cabeçalho da tabela)
+         <tr> (Linha do cabeçalho)
+                <th>Estado</th> (Título da primeira coluna)
+                <th>População</th> (Título da segunda coluna)
+         </tr>
+        </thead>
+
+        <tbody> (Corpo da tabela)
+           
+            <tr>  (Linha de dados)
+                <td>São Paulo</td> (Dado da primeira coluna)
+                <td>45,919,049</td> (Dado da segunda coluna)
+            </tr>
+
+        </tbody>
+
+        <tfoot> (Rodapé da tabela)
+            
+            <tr> (Linha do rodapé)
+                <th>Total de habitantes</th>
+                <td>0000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+-->
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                width: 500px;
+                border-collapse: collapse;
+            }
+            td, th {
+                border: 1px solid black;
+                padding: 10px;
+            }
+            thead, tfoot {
+                background-color: grey;
+                color: white;
+            }
+            td.num {
+                text-align: right ;
+            }
+        </style>
+       </head>
+       <body>
+         <h1>fazendo tabelas grandes</h1>
+         <table>
+            <thead> <!-- (cabeçalho )-->
+                 <th> estado</th> <!-- linha da coluna,titulo,cabelaho, etc-->
+                 <th> população </th>
+            </thead>
+            <tbody>
+                <tr> <!-- linha -->
+                    <td>são paulo</td> <!-- dados da linha -->
+                    <td class="num">45.919.049</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>rio de janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>ceára</td>
+                    <td class="num">9.132.071</td>
+                </tr>
+                <tr>
+                    <td>Rio grande do sul</td>
+                    <td class="num">11.377.239</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- (ródaape )-->
+                 <tr> 
+                    <th>total de habitantes</th>
+                    <td class="num"><strong>210.447.125</strong></td>
+                 </tr>
+            </tfoot>
+         </table>
+       </body>
+       </html>

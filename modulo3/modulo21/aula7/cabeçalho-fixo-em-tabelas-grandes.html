@@ -1,0 +1,116 @@
+<!--
+  Problema na Leitura de Tabelas Extensas:
+
+Quando lidamos com tabelas extensas contendo muitos dados, colunas numerosas e várias linhas,
+ é comum que o cabeçalho da tabela se perca ao rolar para baixo, dificultando a referência rápida
+  aos títulos das colunas.
+
+Solução com Cabeçalho Fixo:
+
+Implementar um cabeçalho fixo permite manter os títulos das colunas sempre visíveis enquanto 
+se navega pelos dados da tabela.
+
+
+Implementação Detalhada do Cabeçalho Fixo:
+
+Seleção do Elemento thead:
+
+Selecione a área do cabeçalho da tabela (thead), onde estão localizadas as células de título das colunas.
+Utilização da Propriedade position: sticky:
+
+Aplique a propriedade CSS position: sticky para tornar o cabeçalho fixo. Isso faz com que o cabeçalho permaneça visível conforme você rola a tabela.
+Definição da Propriedade Auxiliar top:
+
+Para posicionar o cabeçalho fixo corretamente, utilize a propriedade top com um valor negativo, como -1px. Isso garante que o cabeçalho fique fixo imediatamente acima do conteúdo da tabela.
+css
+Copiar código
+thead {
+    position: sticky;
+    top: -1px; /* Fixa o cabeçalho 1 pixel acima do topo da tabela */
+}
+Considerações Importantes:
+
+O cabeçalho fixo só permanecerá dentro da área da tabela, não sobrepondo outros conteúdos abaixo dela.
+Teste o cabeçalho fixo em diferentes navegadores, pois seu suporte pode variar. Alguns navegadores podem
+não suportar essa funcionalidade completamente.
+-->
+
+<!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                width: 500px;
+                border-collapse: collapse;
+            }
+            caption{
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 10px;
+                background-color: lightgray;
+            }
+          
+            tbody > tr:nth-child(even){   /* efeito ebrado */
+               background-color: lightgray;
+            }
+
+            td, th {
+                border: 1px solid black;
+                padding: 10px;
+            }
+            thead, tfoot {
+                background-color: grey;
+                color: white;
+            }
+            thead {
+                position: static;
+                top: -1px;
+                background-color: lightgray;
+            }
+            td.num {
+                text-align: right ;
+            }
+        </style>
+       </head>
+       <body>
+         <h1>fazendo tabelas grandes</h1>
+         <table>
+            <caption>População das unidades federativas</caption>
+            <thead> <!-- (cabeçalho )-->
+                 <th scope="col"> Estado</th> <!-- linha da coluna,titulo,cabelaho, etc-->
+                 <th scope="col" style="width: 80px;"> População </th>
+            </thead>
+            <tbody>
+                <tr> <!-- linha -->
+                    <td>são paulo</td> <!-- dados da linha -->
+                    <td class="num">45.919.049</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>rio de janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>
+                <tr>
+                    <td>ceára</td>
+                    <td class="num">9.132.071</td>
+                </tr>
+                <tr>
+                    <td>Rio grande do sul</td>
+                    <td class="num">11.377.239</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- (ródaape )-->
+                 <tr> 
+                    <th scope="row">total de habitantes</th>
+                    <td class="num"><strong>210.447.125</strong></td>
+                 </tr>
+            </tfoot>
+         </table>
+       </body>
+       </html>
