@@ -1,0 +1,57 @@
+<!--
+ Navegação de Arquivos
+
+Armazenamento de Páginas Locais:
+Para gerenciar páginas exibidas em iframes, é útil criar uma pasta dedicada no servidor para essas páginas.
+Por exemplo, você pode criar uma pasta chamada paginas-extras e armazenar todas as páginas 
+para o iframe nessa pasta. 
+Lembre-se de atualizar o caminho no parâmetro src do iframe para refletir a nova localização.
+
+IFrame Interativo:
+
+- Alteração de Página no IFrame:
+Para substituir a página exibida no iframe, você pode alterar o endereço no parâmetro src. No entanto, 
+é possível permitir que o usuário faça isso de forma interativa.
+
+Configuração de Navegação Interativa:
+Criação de Links:
+Na página principal, crie uma lista com links para as páginas secundárias que você deseja exibir no 
+iframe. Por exemplo:
+<ul>
+  <li><a href="pag1.html" target="frame">Primeira página</a></li>
+  <li><a href="pag2.html" target="frame">Segunda página</a></li>
+  <li><a href="pag3.html" target="frame">Terceira página</a></li>
+</ul>
+
+Configuração do IFrame:
+Na tag do iframe, adicione o parâmetro name com um valor identificador (exemplo: 'frame'):
+
+ex:
+<iframe name="frame" src="" frameborder="0"></iframe>
+
+Com essa configuração, os links na lista atualizarão o conteúdo do iframe sem recarregar 
+a página principal. O parâmetro target nos links deve corresponder ao valor do parâmetro name do iframe.
+
+Exibição Inicial do IFrame:
+Se desejar que o iframe exiba uma página inicial antes de qualquer clique nos links, insira o endereço da
+página no parâmetro src do iframe:
+
+ex:
+<iframe name="frame" src="pagina-inicial.html" frameborder="0"></iframe>
+
+Parâmetro name:
+
+- Função do name:
+O parâmetro name identifica elementos de forma semelhante ao id, mas é usado principalmente para elementos
+ de <form> e para a identificação de iframes. Ele permite que você direcione o conteúdo de formulários e 
+  links para um iframe específico.
+
+Diferença entre name e id:
+id: Utilizado para identificação e manipulação de elementos no front-end (DOM e CSS).
+name: Utilizado principalmente no back-end, especialmente em formulários, para identificar campos e
+ agrupar valores enviados ao servidor.
+
+ Uso Adicional do name:
+O name também pode ser utilizado para enviar formulários diretamente para um iframe, permitindo que
+ o formulário seja exibido dentro do iframe, em vez de atualizar a página principal.
+-->

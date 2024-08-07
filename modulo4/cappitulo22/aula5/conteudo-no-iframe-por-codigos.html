@@ -1,0 +1,58 @@
+<!--
+ 
+Configuração Inicial do Iframe:
+
+- Estado Inicial do Iframe:
+
+Quando a página primária é carregada, o iframe interativo estará vazio. Isso ocorre porque não 
+foi especificado nenhum valor para o parâmetro src.
+
+Sugestão para Conteúdo Inicial:
+É recomendável adicionar algum conteúdo inicial ao iframe para ser exibido antes que uma página secundária
+seja carregada interativamente.
+- Para isso, você pode criar um arquivo HTML separado e definir seu endereço no parâmetro src do iframe,
+que servirá como uma página padrão e inicial.
+
+
+Criando uma Página Inicial:
+
+- Opção 1: Utilizando um Arquivo HTML Separado:
+
+- Crie um arquivo HTML que contenha informações como "Escolha uma das opções acima (páginas secundárias)" 
+e uma imagem de logo.
+- Defina o endereço desse arquivo no parâmetro src do iframe.
+
+Opção 2: Utilizando o Parâmetro srcdoc:
+
+- O parâmetro srcdoc permite adicionar especificações HTML diretamente como valor, que será renderizado
+no iframe como a página inicial.
+- Para usar o srcdoc, remova o parâmetro src e substitua-o por srcdoc, inserindo o código HTML desejado
+(h1,p, img e etc).
+
+Exemplo de Uso do srcdoc:
+<iframe srcdoc="
+<h1>Escolha uma das opções acima</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sapiente et atque aperiam</p>
+<img src='imagens/cursoemvideo-logo-branca.png'>
+" name="frame">
+<p>Infelizmente o seu navegador não é compatível com essa funcionalidade</p>
+</iframe>
+
+Este exemplo cria uma página inicial estática diretamente no iframe, sem a necessidade de um arquivo separado.
+
+Considerações sobre srcdoc:
+
+Vantagens:
+Permite adicionar conteúdo HTML diretamente no parâmetro srcdoc.
+
+Desvantagens:
+O srcdoc suporta apenas código HTML básico, sem suporte a CSS avançado ou scripts JavaScript.
+Para conteúdos mais elaborados, recomenda-se criar um arquivo HTML separado com o código necessário e 
+definir o parâmetro src para esse arquivo.
+
+Alternativa ao srcdoc:
+Você também pode definir uma imagem de plano de fundo ou outras opções de estilo 
+'diretamente no arquivo HTML separado.
+
+-->
+ 

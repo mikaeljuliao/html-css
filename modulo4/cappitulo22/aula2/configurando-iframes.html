@@ -1,0 +1,76 @@
+<!--
+  Tratamento de Erro em IFrames:
+
+Compatibilidade com Navegadores Móveis:
+Nem todos os navegadores móveis suportam iframes. Portanto, para garantir que os usuários em navegadores 
+incompatíveis recebam uma mensagem adequada, você pode inserir texto dentro da tag <iframe>. Esse texto
+será exibido apenas se o navegador não suportar iframes, funcionando como um tratamento de erro.
+
+Mensagem de Erro:
+Dentro da tag <iframe>, insira uma mensagem como: "Seu navegador não é compatível com essa funcionalidade". 
+Esta mensagem aparecerá apenas se o iframe falhar ao carregar devido à incompatibilidade do navegador.
+
+Link de Redirecionamento:
+Como alternativa à mensagem de erro, você pode incluir um link dentro da tag <iframe>, 
+direcionando os usuários para o site que o iframe pretendia exibir. O link deve ter o
+texto descritivo correspondente ao site.
+
+Exibição do Tratamento de Erro:
+Se o navegador do usuário não suportar iframes, a mensagem ou link inserido dentro da tag 
+<iframe> será exibido, garantindo que o usuário receba uma orientação adequada.
+
+Estilização de IFrames:
+
+Dimensões Padrão:
+Por padrão, as dimensões de um iframe são 300x150 pixels. Você pode configurar essas 
+medidas diretamente na tag do iframe utilizando os atributos width e height:
+
+ex html:
+<iframe width="600" height="400"></iframe>
+
+Configuração com CSS:
+Para isso, você deve criar um seletor para o elemento iframe e definir as propriedades:
+
+ex css:
+iframe {
+    width: 600px;
+    height: 400px;
+}
+
+Observação: Configurações de largura e altura feitas com CSS têm prioridade sobre as definidas
+diretamente no HTML. Se nenhuma configuração CSS estiver presente, o HTML determinará as dimensões.
+
+Parâmetro de Rolagem:
+O parâmetro scrolling controla a barra de rolagem do iframe. Ele deve ser inserido na tag de 
+abertura do iframe e aceita os seguintes valores:
+
+- auto: valor padrão. A barra de rolagem aparece quando necessário.
+- yes: Força a exibição da barra de rolagem, independentemente do conteúdo.
+- no: Oculta a barra de rolagem, impedindo o usuário de rolar.
+
+exemplo:
+<iframe scrolling="auto"></iframe>
+
+Borda do IFrame:
+Você pode adicionar uma borda ao iframe usando CSS. Insira a declaração de borda dentro do seletor CSS:
+ex:
+iframe {
+    border: 2px solid black;
+}
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+

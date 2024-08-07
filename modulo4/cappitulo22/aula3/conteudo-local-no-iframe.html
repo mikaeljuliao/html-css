@@ -1,0 +1,65 @@
+<!--
+  Carregamento de Conteúdo Local em IFrames
+
+Utilização de IFrames para Conteúdo Local:
+Além de carregar conteúdo externo (sites de terceiros), você pode usar iframes para exibir 
+conteúdo local (páginas do seu próprio servidor). Isso elimina preocupações com bloqueios 
+de proteção de sites externos, já que você estará trabalhando com suas próprias páginas.
+
+Inserção de Conteúdo Local:
+Para carregar uma página local dentro de um iframe, basta definir o endereço local da página
+ no parâmetro src do iframe:
+ex:
+<iframe src="pag001.html" frameborder="0"></iframe>
+
+- Dessa forma, você pode exibir páginas internas do seu servidor no iframe. Isso permite 
+que você use o iframe para replicar o efeito da propriedade overflow, gerenciando conteúdo 
+que excede limites definidos.
+
+Exemplos de Uso:
+- Tabela Grande e Responsiva:
+Se você possui uma tabela grande que precisa ser responsiva, uma abordagem alternativa ao uso 
+da propriedade overflow é mover a tabela para uma página separada no seu servidor e exibi-la 
+através de um iframe na página principal. Isso limita as dimensões da tabela com barras de rolagem 
+e a torna responsiva somente no iframe. 
+
+centralizar iframe:
+Para centralizar o iframe, use margin: auto e display: block.
+  
+Considerações sobre Responsividade:
+- Uso de Overflow vs. IFrame:
+Para tabelas, é mais eficaz usar a propriedade overflow para torná-las responsivas. Isso 
+ocorre porque os mecanismos de busca podem ter dificuldades em indexar e relacionar conteúdo quando 
+ele é exibido dentro de um iframe. Como tabelas geralmente estão diretamente relacionadas ao
+onteúdo da página, o overflow proporciona uma melhor associação entre os conteúdos.
+
+
+
+Vantagens dos IFrames:
+Uma das vantagens de usar iframes é a capacidade de separar os estilos do conteúdo principal. 
+Ao usar iframes, o conteúdo é exibido como se estivesse em uma nova aba, mas dentro do frame,
+ facilitando a separação dos arquivos de estilo.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>testando iframe local</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam unde ab, 
+        possimus laborum iusto maiores quidem ipsum ad eius excepturi in a sit ut 
+        numquam natus omnis nam fugiat suscipit!</p>
+
+     <iframe src="pag01.html" frameborder="0" height="500px" width="500px"></iframe>   
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam unde ab, 
+     possimus laborum iusto maiores quidem ipsum ad eius excepturi in a sit ut 
+     natus omnis nam fugiat suscipit!</p>    
+</body>
+</html>

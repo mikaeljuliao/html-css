@@ -1,0 +1,97 @@
+<!-- 
+ Como Tornar uma Tabela HTML Responsiva
+
+Para resolver problemas de tabelas muito largas que vazam conteúdo em telas pequenas, 
+como celulares, é importante tornar a tabela responsiva. 
+Aqui está o passo a passo para fazer isso:
+
+Envolver a Tabela com uma <div>:
+Envolva toda a tabela com uma <div> e atribua um ID ou classe para identificação posterior.
+
+- exemplohtml
+<div class="container">
+  <table>
+  (Conteúdo da tabela aqui)
+</table>
+</div>
+
+Aplicar Estilos CSS para Responsividade:
+Utilize CSS para aplicar a propriedade overflow-x: auto; à div container. 
+Isso garante que a tabela será cortada e exibida dentro de uma caixa com barras de
+rolagem horizontal quando a tela for estreita demais para mostrar toda a largura da tabela.
+
+- exemplo css
+.container {
+    overflow-x: auto;
+}
+explicação:
+A propriedade overflow-x controla o comportamento de transbordamento horizontal do conteúdo dentro da div container.
+
+Compreendendo os Valores da Propriedade overflow:
+- overflow-x: Controla o transbordamento do conteúdo para os lados esquerdo e direito da div.
+- overflow-y: Controla o transbordamento para os lados superior e inferior.
+- overflow: Abreviação que combina overflow-x e overflow-y.
+
+Valores Principais da Propriedade overflow:
+visible: Exibe o conteúdo que ultrapassa os limites do elemento, sem barras de rolagem (valor padrao).
+hidden: Oculta o conteúdo que ultrapassa os limites do elemento.
+scroll: Exibe barras de rolagem permanentemente, permitindo ao usuário rolar o 
+conteúdo que ultrapassa os limites.
+auto: Exibe barras de rolagem somente quando necessário, ou seja, quando a largura ou 
+altura do conteúdo ultrapassa os limites do elemento.
+
+consideração final:
+Ao seguir esses passos e entender as propriedades overflow, você garante que sua tabela HTML 
+seja adaptável a diferentes tamanhos de tela, evitando a rolagem lateral indesejada em dispositivos 
+móveis e mantendo uma experiência de usuário consistente e eficiente.
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table{
+      border-collapse: collapse;
+    }
+    caption{
+      font-size: 1.2em;
+      font-weight: bolder;
+      padding: 20px;
+    }
+    th,td{
+      border: 1px solid black;
+    }
+    tr:nth-child(even) {
+      background-color: rgb(228, 228, 228);
+    }
+  </style>
+</head>
+<body>
+  <h1>tabelas sem falas pequenas</h1>
+  <caption>tabela responsiva</caption>
+  <thead>
+    <tr>
+      <th>jan</th>
+      <th>fev</th>
+      <th>mar</th>
+      <th>abr</th>
+      <th>mai</th>
+      <th>jun</th>
+      <th>jul</th>
+      <th>ago</th>
+      <th>set</th>
+      <th>out</th>
+      <th>nov</th>
+      <th>dez</th>
+    </tr>
+    <tbody>
+      
+    </tbody>
+  </thead>
+</body>
+</html>

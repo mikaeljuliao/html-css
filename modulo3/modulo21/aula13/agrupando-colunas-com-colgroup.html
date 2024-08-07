@@ -1,0 +1,123 @@
+<!--
+   AGRUPANDO COLUNAS:
+
+Na parte de HTML:
+
+   Ex:	<table>
+        		<colgroup>
+            		        <col class="cnome">
+            		        <col class="csexo">
+            		        <col class="cidade">
+            		        <col class="cprof">
+        		</ colgroup>
+		.
+		.
+
+Na parte de CSS:
+
+   Ex:		col cnome {
+            		        background-color: yellow;
+       	 	        }
+		        col  csexo {
+			        background-color: green;
+       	 	        }
+		        .
+		        .
+
+Para grupo de colunas:
+
+   Ex:	HTML:	<colgroup>
+            		                <col class="cnome">
+            		                <col class="cgrupo" span="2">	(2 colunas serão formatadas)
+            		                <col class="cprof">
+        		        </ colgroup>
+
+	        CSS:	col cgrupo {
+            		                background-color: red;
+		                }
+-->
+                        
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.171);
+            background-color:lightgray;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        col.cnome{
+            background-color: rgba(215, 215, 255, 0.63);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof"> 
+        </colgroup>
+        <caption>cadastro</caption>
+        <tr>
+            <th scope="col">nome</th>
+            <th scope="col">sexo</th>
+            <th scope="col">idade</th>
+            <th scope="col">profissao</th>
+        </tr>
+        <tr>
+            <td>Ana maria</td>
+            <td>f</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>m</td>
+            <td>28</td>
+            <td>programador</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>m</td>
+            <td>42</td>
+            <td>professor</td>
+        </tr>
+        <tr>
+            <td>Héilo</td>
+            <td>m</td>
+            <td>19</td>
+            <td>vendedor</td>
+        </tr>
+        <tr>
+            <td>maria</td>
+            <td>f</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+           <td> Otáviio</td>
+           <td>m</td>
+           <td>22</td>
+           <td>nutricionista</td>
+        </tr>
+    </table>
+</body>
+</html>
