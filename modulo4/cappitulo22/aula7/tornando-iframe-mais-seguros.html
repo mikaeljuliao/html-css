@@ -1,0 +1,76 @@
+<!--
+    Segurança em Iframes:
+Ao utilizar iframes para incorporar sites de terceiros em seu próprio site, é essencial
+ adotar medidas de segurança para minimizar riscos, como ataques de "cross-site scripting"
+(XSS). práticas recomendadas e parâmetros de segurança abaixo.
+
+Parâmetros de Segurança em Iframes:
+- Sandbox
+O parâmetro sandbox ajuda a isolar o conteúdo dentro do iframe, reduzindo o risco de 
+execução de código malicioso. Quando você usa o sandbox com o valor "sandbox", 
+diversas funcionalidades são bloqueadas.
+- Envio de Dados de Formulários: Os formulários dentro do iframe não poderão enviar dados.
+- Execução de Scripts: Scripts JavaScript não serão executados.
+- APIs e Janelas Modais: APIs, janelas modais e popups são desativados.
+- Plugins: Elementos como <embed>, <object> e <applet> são bloqueados.
+- Navegação Top Level: O iframe não pode alterar a navegação principal do navegador.
+- Recursos de Autoplay e Foco Automático: Recursos como autoplay e foco automático em elementos 
+de formulário são bloqueados.
+
+exemplo de Uso:
+<iframe src="url-do-site" sandbox="sandbox"></iframe>
+
+Referrer Policy:
+O parâmetro referrerpolicy controla como as informações de referência são enviadas 
+quando um usuário navega para fora do seu site. O valor padrão é "no-referrer-when-downgrade", 
+mas você pode configurá-lo para aumentar a privacidade.
+
+Valores e Efeitos:
+- no-referrer: Não envia o cabeçalho Referer de forma alguma.
+- no-referrer-when-downgrade: (padrão) Não envia Referer para conexões HTTP se o site original era HTTPS.
+- origin: Envia apenas a origem do site de referência.
+- origin-when-cross-origin: Envia a origem para sites de outros domínios.
+- same-origin: Envia Referer apenas para o mesmo domínio.
+- strict-origin: Envia a origem apenas para conexões seguras e para o mesmo domínio.
+- strict-origin-when-cross-origin: Envia a origem apenas para conexões seguras e para o mesmo domínio,
+ mas envia o cabeçalho Referer completo para o mesmo domínio.
+- unsafe-url: Envia o cabeçalho Referer completo, independentemente da segurança da conexão.
+
+exemplo de Uso:
+<iframe src="url-do-site" referrerpolicy="no-referrer"></iframe>
+
+Exceções de Segurança para Sandbox:
+Em alguns casos, você pode precisar permitir certas funcionalidades dentro do iframe, 
+mesmo quando a proteção sandbox está ativa. Para isso, você pode usar valores específicos
+
+para permitir exceções:
+- allow-same-origin: Permite que o conteúdo de origem mesma (local) funcione normalmente,
+enquanto o conteúdo de terceiros ainda está restrito.
+- allow-forms: Permite que os formulários dentro do iframe funcionem normalmente.
+- allow-scripts: Permite a execução de scripts JavaScript dentro do iframe.
+Atenção: Isso pode ser arriscado, pois scripts podem ser maliciosos.
+
+Exemplo de Configuração Combinada:
+<iframe src="url-do-site" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>
+
+Nota: Quando você define um valor específico para sandbox, todas as 
+outras restrições continuam aplicadas. Ou seja, qualquer funcionalidade
+ não explicitamente permitida ainda estará bloqueada.
+
+Conclusão:
+Adotar essas configurações de segurança ajuda a proteger seu site contra possíveis 
+vulnerabilidades e ataques ao usar iframes. Sempre avalie cuidadosamente as exceções
+ de segurança e ajuste as configurações conforme as necessidades específicas do seu site.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
