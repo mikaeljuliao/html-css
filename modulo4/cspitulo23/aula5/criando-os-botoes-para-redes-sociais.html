@@ -1,0 +1,90 @@
+
+<!--
+ como arredondar uma imagem quadrada:
+ o border-radios com o valor 50% vai torna a imagem redonda
+ex: img{
+   border-radios: 50%;
+}
+ forma de subistuir o br com css:
+quando tem varias imagens um do lado da outra da pra quebrar as linhas com 
+o display: block; (transforma cada elemento em bloco)
+ex: img{
+  display: block;
+}
+
+
+
+Problema com o Deslocamento dos Ícones:
+Adicionar uma borda que aparece apenas no hover pode fazer com que os ícones 
+vizinhos se movam. Isso acontece porque a borda não faz parte do tamanho original
+ do objeto e, ao ser exibida, expande a caixa do ícone, empurrando os ícones adjacentes.
+
+Solução com box-sizing:
+Para evitar esse deslocamento , usamos a propriedade CSS box-sizing.
+ Ao definir box-sizing: border-box para o seletor
+  da imagem do ícone, a borda será considerada como parte do objeto, e os ícones 
+  vizinhos não serão deslocados com o surgimento da borda.
+
+O que é box-sizing:
+A propriedade box-sizing modifica a forma como o tamanho de um elemento é calculado. 
+Por padrão, o tamanho absoluto de uma caixa é calculado como:
+
+- width e height (dimensões definidas)
+- padding
+- border
+
+obs: Isso pode causar confusão ao alinhar caixas no layout, pois a dimensão 
+final da caixa não considera apenas o width e height definidos, mas também o padding e a border.
+
+Valores da Propriedade box-sizing:
+content-box (padrão): As propriedades de largura (width) e altura (height)
+ incluem apenas o conteúdo, excluindo padding e border. O cálculo é: width/height + padding + border.
+
+border-box: As propriedades de largura (width) e altura (height) incluem padding e border.
+ O cálculo é: width/height. Isso evita o aumento da caixa com o padding e border, mantendo 
+ o tamanho total fixo.
+
+padding-box: As propriedades de largura (width) e altura (height) incluem o padding,
+ mas não o border. O cálculo é: width/height + border.
+
+Recomendação:
+Use box-sizing: border-box em todos os seus projetos para tornar o trabalho mais 
+produtivo e consistente. Essa configuração pode ser aplicada ao seletor global, 
+garantindo que todas as caixas na página sejam medidas com width e height incluindo padding e border.
+
+Observação: Ao definir box-sizing: border-box em um projeto existente, esteja ciente 
+de que o layout pode quebrar, a menos que você ajuste as dimensões dos elementos conforme necessário.
+
+Alternativa ao Uso de box-sizing:
+Uma alternativa para evitar o deslocamento dos itens vizinhos sem usar box-sizing é
+ usar a propriedade outline em vez de border. A outline não afeta o tamanho total do
+  elemento e, portanto, não empurra os itens vizinhos.
+
+Nota: Embora a configuração de box-sizing seja útil para evitar deslocamentos e problemas
+ de layout, a utilização de outline pode ser uma solução prática em certos casos específicos.
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <main>
+        <section id="telefone">
+            <iframe src="home.html"  name="tela" id="tela" frameborder="0"></iframe>
+        </section>
+        <section id="redes-sociais">
+          <a href="#" target="tela"> <img src="imagens/logo-home.jpg" alt="home"></a>
+          <a href="#" target="tela"> <img src="imagens/logo-youtube.jpg" alt="youtube"></a>
+          <a href="#" target="tela"> <img src="imagens/logo-github.jpg" alt="github"></a>
+          <a href="#" target="tela"> <img src="imagens/logo-instagram.jpg" alt="instagram"></a>
+          <a href="#" target="tela"> <img src="imagens/logo-twitter.jpg" alt="twitter"></a>
+          <a href="#" target="tela"> <img src="imagens/logo-facebook.jpg" alt="facebook"></a>
+        </section>
+    </main>
+</body>
+</html>
