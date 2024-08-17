@@ -29,11 +29,9 @@ O que é box-sizing:
 A propriedade box-sizing modifica a forma como o tamanho de um elemento é calculado. 
 Por padrão, o tamanho absoluto de uma caixa é calculado como:
 
-- width e height (dimensões definidas)
-- padding
-- border
+- width e height (dimensões definidas) + padding + border
 
-obs: Isso pode causar confusão ao alinhar caixas no layout, pois a dimensão 
+ Isso pode causar confusão ao alinhar caixas no layout, pois a dimensão 
 final da caixa não considera apenas o width e height definidos, mas também o padding e a border.
 
 Valores da Propriedade box-sizing:
@@ -46,11 +44,6 @@ border-box: As propriedades de largura (width) e altura (height) incluem padding
 
 padding-box: As propriedades de largura (width) e altura (height) incluem o padding,
  mas não o border. O cálculo é: width/height + border.
-
-Recomendação:
-Use box-sizing: border-box em todos os seus projetos para tornar o trabalho mais 
-produtivo e consistente. Essa configuração pode ser aplicada ao seletor global, 
-garantindo que todas as caixas na página sejam medidas com width e height incluindo padding e border.
 
 Observação: Ao definir box-sizing: border-box em um projeto existente, esteja ciente 
 de que o layout pode quebrar, a menos que você ajuste as dimensões dos elementos conforme necessário.
