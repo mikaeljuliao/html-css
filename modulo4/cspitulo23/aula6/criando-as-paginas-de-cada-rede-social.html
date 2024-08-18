@@ -1,3 +1,64 @@
+<!--
+ 
+
+
+Personalização da Barra de Rolagem
+
+Introdução:
+Corpo (Elemento que contém todos os outros componentes da barra de rolagem)
+Trilho (Espaço em branco onde o indicador desliza)
+Scrollbar (Alça arrastável que indica a posição da página)
+Botões (Botões localizados nas extremidades do trilho)
+
+Corpo da Barra de Rolagem:
+
+Pseudo-elemento: ::-webkit-scrollbar
+Descrição: Contém todos os outros componentes da barra de rolagem.
+Customização: Defina largura e altura. Para ocultar a barra de rolagem, use display: none.
+
+Trilho:
+Pseudo-elemento: ::-webkit-scrollbar-track
+Descrição: Espaço onde o indicador desliza.
+Customização: Cor de fundo, borda, arredondamento ,
+adicionar imagem como background (não recomendavel). A largura do trilho segue a do Corpo.
+
+Scrollbar:
+Pseudo-elemento: ::-webkit-scrollbar-thumb
+Descrição: Alça cinza arrastável indicando a posição da página.
+Customização: Cor de fundo, borda, arredondamento, adicionar imagem como background (não recomendavel).
+
+Botões:
+Pseudo-elemento: ::-webkit-scrollbar-button
+Descrição: Botões nas extremidades do trilho.
+Customização: Altura, cor de fundo, arredpndamento das borda.
+
+Aplicação dos Seletores:
+Use pseudo-elementos dentro de seletores globais (body, html) ou específicos para elementos com overflow.
+Exemplo de Hover:
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(92, 92, 92);
+}
+
+Barra de Rolagem Vertical e Horizontal:
+
+Pseudo-classes: :vertical, :horizontal
+
+Exemplo de estilização horizontal:
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgb(0, 255, 242);
+}
+
+Exemplo de estilização vertical:
+::-webkit-scrollbar-thumb:vertical {
+  background-color: rgb(0, 255, 242);
+}
+
+Canto:
+Pseudo-elemento: ::-webkit-scrollbar-corner
+Descrição: Área onde barras vertical e horizontal se encontram.
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,11 +74,11 @@
         </section>
         <section id="redes-sociais">
           <a href="home.html" target="tela"> <img src="imagens/logo-home.jpg" alt="home"></a>
-          <a href="#" target="tela"> <img src="imagens/logo-youtube.jpg" alt="youtube"></a>
-          <a href="#" target="tela"> <img src="imagens/logo-github.jpg" alt="github"></a>
-          <a href="#" target="tela"> <img src="imagens/logo-instagram.jpg" alt="instagram"></a>
-          <a href="#" target="tela"> <img src="imagens/logo-twitter.jpg" alt="twitter"></a>
-          <a href="#" target="tela"> <img src="imagens/logo-facebook.jpg" alt="facebook"></a>
+          <a href="youtube.html" target="tela"> <img src="imagens/logo-youtube.jpg" alt="youtube"></a>
+          <a href="github.html" target="tela"> <img src="imagens/logo-github.jpg" alt="github"></a>
+          <a href="instagram.html" target="tela"> <img src="imagens/logo-instagram.jpg" alt="instagram"></a>
+          <a href="twiter.html" target="tela"> <img src="imagens/logo-twitter.jpg" alt="twitter"></a>
+          <a href="facebook.html" target="tela"> <img src="imagens/logo-facebook.jpg" alt="facebook"></a>
         </section>
     </main>
 </body>

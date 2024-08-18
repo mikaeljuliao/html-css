@@ -1,0 +1,73 @@
+<!--
+Criando um Formulário Simples
+
+  Tag <form>:
+Descrição: tag do formulário. Todo conteúdo dentro dessas tags será incluído no formulário.
+Função: Ao clicar em "enviar", o sistema envia todos os dados do formulário para o servidor.
+Nota: A tag <form> possui atributos importantes, que serão abordados posteriormente.
+
+   Tag <label>:
+Descrição: Define uma etiqueta para um componente de entrada do formulário
+(por exemplo, uma caixa de texto), tabem posso escrever titulo da etiqueta.
+Exemplo: <label>Nome:</label>
+Nota: A tag <label> também possui atributos importantes que serão discutidos mais adiante.
+
+    Tag <input>:
+Descrição: Adiciona um componente para receber dados do usuário. 
+O tipo de entrada é especificado no atributo type.
+Exemplo: Para uma caixa de texto, use <input type="text" name="nome" id="nome">
+Nota: Os atributos name e id são comuns e recomendados para a maioria dos tipos de <input>.
+
+  Botão "Enviar":
+Descrição: Inicia a ação de submissão dos dados do formulário. É um componente <input> do tipo "submit".
+Exemplo: <input type="submit" value="Enviar">
+Nota: O atributo value define o rótulo do botão.
+
+Vínculo entre <label> e <input>:
+Importância: Estabelece uma conexão entre a etiqueta e o componente de entrada, 
+o que é essencial para acessibilidade e usabilidade.
+
+      
+exemplo de formulario com oque foi ensinado:
+
+    -- Início do Formulário --
+    <form >
+        
+    -- Etiqueta para o campo de nome --
+        <label for="nome">Nome:</label>
+    -- Campo de entrada para o nome --
+        <input type="text" id="nome" name="nome">
+        
+    -- Etiqueta para o campo de e-mail --
+        <label for="email">E-mail:</label>
+    -- Campo de entrada para o e-mail --
+        <input type="email" id="email" name="email">
+        
+    -- Etiqueta para o campo de mensagem --
+        <label for="mensagem">Mensagem:</label>
+    -- Campo de entrada para a mensagem --
+        <textarea id="mensagem" name="mensagem"></textarea>
+        
+    -- Botão para enviar o formulário --
+        <input type="submit" value="Enviar">
+        
+    </form>
+    -- Fim do Formulário --
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>MEU PRIMEIRO FORMULARIO</H1>
+    <form>
+        <p>nome: <input type="text" name="nome" id="nome"></p>
+        <p>sobrenome <input type="text" name="nome" id="nome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
